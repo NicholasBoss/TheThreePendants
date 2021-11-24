@@ -21,7 +21,7 @@ Classes needed:
 Actor - this will be handling all actions that the actors can do
 Character - This will handle all information for the player character
 Pendant - This class will contain all information pertaining to the pendants
-Objects - This class will contain all the trees, bushes and other hiding places for the pendants
+Bushes - This class will contain all the trees, bushes and other hiding places for the pendants
 Point - This will represent an X,Y pair. Can be used for both velocity and a point.
 Program - The base program class will initialize the cast, the script and the game
 Director - This will make sure the game runs

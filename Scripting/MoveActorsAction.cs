@@ -3,6 +3,9 @@ using THETHREEPENDANTS.Casting;
 using THETHREEPENDANTS.Services;
 namespace THETHREEPENDANTS.Scripting
 {
+    ///<summary>
+    /// This class will control how each actor will move on the screen
+    ///<summary>
     public class MoveActorsAction : Action
     {
         public MoveActorsAction()

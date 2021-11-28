@@ -4,21 +4,22 @@ using THETHREEPENDANTS.Services;
 
 namespace THETHREEPENDANTS.Casting
 {
+    ///<summary>
+    /// This class will handle all needed action with implementing the character of the game
+    ///<summary>
     public class Character : Actor
     {
-        private string _image = Constants.IMAGE_PADDLE;
-        private int _height = Constants.PADDLE_HEIGHT;
-        private int _width = Constants.PADDLE_WIDTH;
-        private int _PaddleX = Constants.PADDLE_X;
-        private int _PaddleY = Constants.PADDLE_Y;
-
-
+        private string _charimg = Constants.IMAGE_CHARACTER;
+        private int _charwidth = Constants.CHARACTER_WIDTH;
+        private int _charheight = Constants.CHARACTER_HEIGHT;
+        private int _charX = Constants.CHARACTER_X;
+        private int _charY = Constants.CHARACTER_Y;
         public Character()
         {
-            SetHeight(_height);
-            SetWidth(_width);
-            SetImage(_image);
-            SetPosition(new Point(_PaddleX,_PaddleY));
+            SetHeight(_charheight);
+            SetWidth(_charwidth);
+            SetImage(_charimg);
+            SetPosition(new Point(_charX,_charY));
         }
     }
 }

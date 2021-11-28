@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace THETHREEPENDANTS.Scripting
 {
+    ///<summary>
+    /// This class will control how each actor will act when collided with.
+    ///<summary>
     public class HandleCollisionsAction : Action
     {
         PhysicsService _physicsService;
@@ -18,53 +21,53 @@ namespace THETHREEPENDANTS.Scripting
 
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
-            Actor ball = cast["balls"][0];
-            List<Actor> Bricks = cast["bricks"];
+            // Actor ball = cast["balls"][0];
+            // List<Actor> Bricks = cast["bricks"];
 
-            List<Actor> paddles = cast["paddle"];
-            List<Actor> bricks = cast["bricks"];
+            // List<Actor> paddles = cast["paddle"];
+            // List<Actor> bricks = cast["bricks"];
 
-            List<Actor> bricksToRemove = new List<Actor>();
+            // List<Actor> bricksToRemove = new List<Actor>();
 
-            foreach(Actor actor in paddles)
-            {
-                Character paddle = (Character)actor;
-                if(_physicsService.IsCollision(ball,paddle))
-                {
-                    _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                    ball.ChangeVelocityY();
-                }
-            }
+            // foreach(Actor actor in paddles)
+            // {
+            //     Character paddle = (Character)actor;
+            //     if(_physicsService.IsCollision(ball,paddle))
+            //     {
+            //         // _audioService.PlaySound(Constants.SOUND_BOUNCE);
+            //         ball.ChangeVelocityY();
+            //     }
+            // }
 
-            foreach(Actor actor in bricks)
-            {
-                Pendant brick = (Pendant)actor;
-                if(_physicsService.IsCollision(ball,brick))
-                {
-                    _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                    ball.ChangeSpeed();
+            // foreach(Actor actor in bricks)
+            // {
+            //     Pendant brick = (Pendant)actor;
+            //     if(_physicsService.IsCollision(ball,brick))
+            //     {
+            //         // _audioService.PlaySound(Constants.SOUND_BOUNCE);
+            //         ball.ChangeSpeed();
 
-                    bricksToRemove.Add(brick);
+            //         bricksToRemove.Add(brick);
 
-                }
-            }
+            //     }
+            // }
 
-            foreach(Actor brick in bricksToRemove)
-            {
-                cast["bricks"].Remove(brick);
-            }
-            static bool IsEmpty<Actor>(List<Actor> Bricks)
-            {
-                if (Bricks == null) {
-                    return true;
-                }
+            // foreach(Actor brick in bricksToRemove)
+            // {
+            //     cast["bricks"].Remove(brick);
+            // }
+            // static bool IsEmpty<Actor>(List<Actor> Bricks)
+            // {
+            //     if (Bricks == null) {
+            //         return true;
+            //     }
         
-                return !Bricks.Any();
-            }
-            if (IsEmpty(Bricks))
-            {
-                Raylib_cs.Raylib.CloseWindow();
-            }
+            //     return !Bricks.Any();
+            // }
+            // if (IsEmpty(Bricks))
+            // {
+            //     Raylib_cs.Raylib.CloseWindow();
+            // }
         }
     }
 }

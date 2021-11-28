@@ -5,6 +5,9 @@ using THETHREEPENDANTS.Services;
 
 namespace THETHREEPENDANTS.Scripting
 {
+    ///<summary>
+    /// This class will control how each actor will act when it interacts with the edge of the screen
+    ///<summary>
     public class HandleOffScreenAction : Action
     {
         AudioService _audioService;
@@ -22,17 +25,17 @@ namespace THETHREEPENDANTS.Scripting
             {
                 if(ball.GetRightEdge() >= Constants.MAX_X || ball.GetLeftEdge() <= 0)
                 {
-                    _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                    // _audioService.PlaySound(Constants.SOUND_BOUNCE);
                     ball.ChangeVelocityX();
                 }
                 if(ball.GetTopEdge() <= 0)
                 {
-                    _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                    // _audioService.PlaySound(Constants.SOUND_BOUNCE);
                     ball.ChangeVelocityY();
                 }
                 if(ball.GetBottomEdge() >= Constants.MAX_Y)
                 {
-                    _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                    // _audioService.PlaySound(Constants.SOUND_BOUNCE);
                     ball.ChangeVelocityY();
                 }
                 

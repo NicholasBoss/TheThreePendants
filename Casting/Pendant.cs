@@ -2,14 +2,12 @@ namespace THETHREEPENDANTS.Casting
 {
     public class Pendant : Actor
     {
-        // private string _image = Constants.IMAGE_BRICK;
-        // private int _height = Constants.BRICK_HEIGHT;
-        // private int _width = Constants.BRICK_WIDTH;
+        ///<summary>
+        /// This class will define the attributes of each of the pendants
+        ///<summary>
         public Pendant()
         {
-            SetHeight(_height);
-            SetWidth(_width);
-            // SetImage(_image);           
+                     
         }
     }
 }

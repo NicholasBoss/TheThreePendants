@@ -4,6 +4,9 @@ using THETHREEPENDANTS.Services;
 
 namespace THETHREEPENDANTS
 {
+    ///<summary>
+    /// This class will control how each actor will recieve input from the user
+    ///<summary>
     public class ControlActorsAction : Action
     {
         InputService _inputService;

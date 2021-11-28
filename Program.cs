@@ -18,16 +18,16 @@ namespace THETHREEPENDANTS
 
             // TODO: Add your bricks here
 
-            int spacing = Constants.BRICK_WIDTH + Constants.BRICK_SPACE;
-            int vert_spacing = Constants.BRICK_HEIGHT + Constants.BRICK_SPACE;
+            // int spacing = Constants.BRICK_WIDTH + Constants.BRICK_SPACE;
+            // int vert_spacing = Constants.BRICK_HEIGHT + Constants.BRICK_SPACE;
 
-            for (int x = 0; x < Constants.MAX_X - Constants.BRICK_WIDTH; x+= spacing)
+            // for (int x = 0; x < Constants.MAX_X - Constants.BRICK_WIDTH; x+= spacing)
             {
-                for (int y = 0; y < 150; y+= vert_spacing)
+                // for (int y = 0; y < 150; y+= vert_spacing)
                 {
-                    Pendant brick = new Pendant();
-                    brick.SetPosition(new Point(x,y));
-                    cast["bricks"].Add(brick);
+                    // Pendant brick = new Pendant();
+                    // brick.SetPosition(new Point(x,y));
+                    // cast["bricks"].Add(brick);
                 }
                 
             }
@@ -37,8 +37,8 @@ namespace THETHREEPENDANTS
 
             // TODO: Add your ball here
             Bushes ball = new Bushes();
-            ball.SetPosition(new Point(Constants.BALL_X,Constants.BALL_Y));
-            cast["balls"].Add(ball);
+            // ball.SetPosition(new Point(Constants.BALL_X,Constants.BALL_Y));
+            // cast["balls"].Add(ball);
 
             // The paddle
             cast["paddle"] = new List<Actor>();
@@ -75,7 +75,7 @@ namespace THETHREEPENDANTS
             // Start up the game
             outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "Batter", Constants.FRAME_RATE);
             audioService.StartAudio();
-            audioService.PlaySound(Constants.SOUND_START);
+            // audioService.PlaySound(Constants.SOUND_START);
 
             Director theDirector = new Director(cast, script);
             theDirector.Direct();

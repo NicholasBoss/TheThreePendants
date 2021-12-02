@@ -6,7 +6,7 @@ Top Priorities:
 Character
 Level map 
 Objects to hide pendant under.
-Messages to display when pendant is found.
+Messages to display when pendant is found/not found.
 Lose condition? (timer/damage to player?(Would need character to have lives))
 
 Low Priorities:

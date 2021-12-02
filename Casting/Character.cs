@@ -17,6 +17,8 @@ namespace THETHREEPENDANTS.Casting
         public Character()
         {
             SetImage(_charimg);
+            SetHeight(_charheight);
+            SetWidth(_charwidth);
             // SetText("#");
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;

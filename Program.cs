@@ -44,7 +44,6 @@ namespace THETHREEPENDANTS
             // The player
             cast["character"] = new List<Actor>();
 
-            // TODO: Add your player here
             Character character = new Character();
             cast["character"].Add(character);
 
@@ -63,7 +62,7 @@ namespace THETHREEPENDANTS
             DrawActorsAction drawActorsAction = new DrawActorsAction(outputService);
             script["output"].Add(drawActorsAction);
 
-            // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
+            // The actions here are to handle the input, move the actors, handle collisions, etc.
             MoveActorsAction moveActorsAction = new MoveActorsAction();
             script["update"].Add(moveActorsAction);
 
@@ -72,7 +71,7 @@ namespace THETHREEPENDANTS
 
             ControlActorsAction controlActorsAction = new ControlActorsAction(inputService);
             script["update"].Add(controlActorsAction);
-            
+
             HandleCollisionsAction handleCollisionsAction = new HandleCollisionsAction(physicsService, audioService);
             script["update"].Add(handleCollisionsAction);
 

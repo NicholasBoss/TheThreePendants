@@ -28,8 +28,8 @@ namespace THETHREEPENDANTS
         public const int CHARACTER_X = MAX_X / 2;
         public const int CHARACTER_Y = MAX_Y - 125;
 
-        public const int CHARACTER_WIDTH = 33;
-        public const int CHARACTER_HEIGHT = 33;
+        public const int CHARACTER_WIDTH = 20;
+        public const int CHARACTER_HEIGHT = 20;
 
         public const int PADDLE_SPEED = 10;
 

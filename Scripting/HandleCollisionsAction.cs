@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using THETHREEPENDANTS.Casting;
 using THETHREEPENDANTS.Services;
-using System.Linq;
 
 namespace THETHREEPENDANTS.Scripting
 {
@@ -21,53 +20,23 @@ namespace THETHREEPENDANTS.Scripting
 
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
-            // Actor ball = cast["balls"][0];
-            // List<Actor> Bricks = cast["bricks"];
+            Actor billboard = cast["environment"][0];
+            Actor character = cast["character"][0];
+            
+            List<Actor> bushes = cast["bushes"];
 
-            // List<Actor> paddles = cast["paddle"];
-            // List<Actor> bricks = cast["bricks"];
+            billboard.SetText(Constants.DEFAULT_BILLBOARD_MESSAGE);
 
-            // List<Actor> bricksToRemove = new List<Actor>();
+            foreach(Actor actor in bushes)
+            {
+                Bush bush = (Bush)actor;
+                if(_physicsService.IsCollision(character, bush))
+                {
+                    string bushText = bush.GetDescription();
+                    billboard.SetText(bushText);
+                }
+            }
 
-            // foreach(Actor actor in paddles)
-            // {
-            //     Character paddle = (Character)actor;
-            //     if(_physicsService.IsCollision(ball,paddle))
-            //     {
-            //         // _audioService.PlaySound(Constants.SOUND_BOUNCE);
-            //         ball.ChangeVelocityY();
-            //     }
-            // }
-
-            // foreach(Actor actor in bricks)
-            // {
-            //     Pendant brick = (Pendant)actor;
-            //     if(_physicsService.IsCollision(ball,brick))
-            //     {
-            //         // _audioService.PlaySound(Constants.SOUND_BOUNCE);
-            //         ball.ChangeSpeed();
-
-            //         bricksToRemove.Add(brick);
-
-            //     }
-            // }
-
-            // foreach(Actor brick in bricksToRemove)
-            // {
-            //     cast["bricks"].Remove(brick);
-            // }
-            // static bool IsEmpty<Actor>(List<Actor> Bricks)
-            // {
-            //     if (Bricks == null) {
-            //         return true;
-            //     }
-        
-            //     return !Bricks.Any();
-            // }
-            // if (IsEmpty(Bricks))
-            // {
-            //     Raylib_cs.Raylib.CloseWindow();
-            // }
         }
     }
 }

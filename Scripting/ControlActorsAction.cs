@@ -20,7 +20,7 @@ namespace THETHREEPENDANTS
         {
             Point direction = _inputService.GetDirection();
             
-            Actor paddle = cast["paddle"][0];
+            Actor paddle = cast["character"][0];
 
             Point velocity = direction.Scale(Constants.PADDLE_SPEED);
             paddle.SetVelocity(velocity);

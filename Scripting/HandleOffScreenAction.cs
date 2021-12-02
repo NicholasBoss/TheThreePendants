@@ -18,7 +18,7 @@ namespace THETHREEPENDANTS.Scripting
 
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
-            List<Actor> balls = cast["balls"];
+            List<Actor> balls = cast["bushes"];
 
             //if ball position is off the screen, change its velocity.
             foreach (Actor ball in balls)

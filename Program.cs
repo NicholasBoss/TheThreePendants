@@ -13,39 +13,40 @@ namespace THETHREEPENDANTS
             // Create the cast
             Dictionary<string, List<Actor>> cast = new Dictionary<string, List<Actor>>();
 
-            // Bricks
-            cast["bricks"] = new List<Actor>();
+            //Environment Objects
+            cast["environment"] = new List<Actor>();
 
-            // TODO: Add your bricks here
+            Billboard billboard = new Billboard();
+            cast["environment"].Add(billboard);
 
-            // int spacing = Constants.BRICK_WIDTH + Constants.BRICK_SPACE;
-            // int vert_spacing = Constants.BRICK_HEIGHT + Constants.BRICK_SPACE;
+            // Stationary Objects
+            cast["bushes"] = new List<Actor>();
 
-            // for (int x = 0; x < Constants.MAX_X - Constants.BRICK_WIDTH; x+= spacing)
+            BushesGenerator generator = new BushesGenerator();
+
+            Bush pendant1 = generator.Generate();
+            pendant1.SetDescription("You have found a pendant");
+            cast["bushes"].Add(pendant1);
+            Bush pendant2 = generator.Generate();
+            pendant1.SetDescription("You have found a pendant");
+            cast["bushes"].Add(pendant2);
+            Bush pendant3 = generator.Generate();
+            pendant1.SetDescription("You have found a pendant");
+            cast["bushes"].Add(pendant3);
+
+            for (int i = 0; i < Constants.NUM_BUSHES; i++)
             {
-                // for (int y = 0; y < 150; y+= vert_spacing)
-                {
-                    // Pendant brick = new Pendant();
-                    // brick.SetPosition(new Point(x,y));
-                    // cast["bricks"].Add(brick);
-                }
-                
+                Bush bush = generator.Generate();
+                cast["bushes"].Add(bush);
             }
+            
 
-            // The Ball (or balls if desired)
-            cast["balls"] = new List<Actor>();
+            // The player
+            cast["character"] = new List<Actor>();
 
-            // TODO: Add your ball here
-            Bushes ball = new Bushes();
-            // ball.SetPosition(new Point(Constants.BALL_X,Constants.BALL_Y));
-            // cast["balls"].Add(ball);
-
-            // The paddle
-            cast["paddle"] = new List<Actor>();
-
-            // TODO: Add your paddle here
-            Character paddle = new Character();
-            cast["paddle"].Add(paddle);
+            // TODO: Add your player here
+            Character character = new Character();
+            cast["character"].Add(character);
 
             // Create the script
             Dictionary<string, List<Action>> script = new Dictionary<string, List<Action>>();
@@ -65,15 +66,18 @@ namespace THETHREEPENDANTS
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
             MoveActorsAction moveActorsAction = new MoveActorsAction();
             script["update"].Add(moveActorsAction);
+
             HandleOffScreenAction handleOffScreenAction = new HandleOffScreenAction(audioService);
             script["update"].Add(handleOffScreenAction);
+
             ControlActorsAction controlActorsAction = new ControlActorsAction(inputService);
             script["update"].Add(controlActorsAction);
+            
             HandleCollisionsAction handleCollisionsAction = new HandleCollisionsAction(physicsService, audioService);
             script["update"].Add(handleCollisionsAction);
 
             // Start up the game
-            outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "Batter", Constants.FRAME_RATE);
+            outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "The Three Pendants", Constants.FRAME_RATE);
             audioService.StartAudio();
             // audioService.PlaySound(Constants.SOUND_START);
 

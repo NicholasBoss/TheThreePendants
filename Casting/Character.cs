@@ -16,10 +16,14 @@ namespace THETHREEPENDANTS.Casting
         private int _charY = Constants.CHARACTER_Y;
         public Character()
         {
-            SetHeight(_charheight);
-            SetWidth(_charwidth);
             SetImage(_charimg);
-            SetPosition(new Point(_charX,_charY));
+            // SetText("#");
+            int x = Constants.MAX_X / 2;
+            int y = Constants.MAX_Y / 2;
+            Point position = new Point(x, y);
+            SetPosition(position);
+
+            SetVelocity(new Point(1, 0));
         }
     }
 }

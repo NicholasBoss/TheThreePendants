@@ -22,7 +22,7 @@ namespace THETHREEPENDANTS
             
             Actor paddle = cast["character"][0];
 
-            Point velocity = direction.Scale(Constants.PADDLE_SPEED);
+            Point velocity = direction.Scale(Constants.CHARACTER_SPEED);
             paddle.SetVelocity(velocity);
         }
     }

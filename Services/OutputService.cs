@@ -10,7 +10,7 @@ namespace THETHREEPENDANTS.Services
     /// </summary>
     public class OutputService
     {
-        private Raylib_cs.Color _backgroundColor = Raylib_cs.Color.WHITE;
+        private Raylib_cs.Color _backgroundColor = Raylib_cs.Color.LIME;
         private Dictionary<string, Raylib_cs.Texture2D> _textures
             = new Dictionary<string, Raylib_cs.Texture2D>();
 

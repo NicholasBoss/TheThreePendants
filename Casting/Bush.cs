@@ -10,6 +10,8 @@ namespace THETHREEPENDANTS.Casting
         public Bush()
         {
             SetText("?");
+            SetHeight(Constants.BUSH_HEIGHT);
+            SetWidth(Constants.BUSH_WIDTH);
         }
 
         public string GetDescription()
@@ -21,6 +23,7 @@ namespace THETHREEPENDANTS.Casting
         {
             _description = description;
         }
+        
         
     }
 }

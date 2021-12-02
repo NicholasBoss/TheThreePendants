@@ -49,7 +49,10 @@ namespace THETHREEPENDANTS.Casting
             SetVelocity(new Point(speed,-y));
         }
 
-
+        public bool IsFound()
+        {
+            return (GetImage() == Constants.IMAGE_PENDANT);
+        }
 
         public void SetImage(string image)
         {

@@ -19,7 +19,11 @@ namespace THETHREEPENDANTS
         public const string DEFAULT_BILLBOARD_MESSAGE = "Find the three pendants";
 
         // Images for the game will be initialized here
-        public const string IMAGE_CHARACTER = "./Assets/bluebox.png";
+        public const string IMAGE_CHARACTER = "./Assets/player.png";
+        public const string IMAGE_BUSH = "./Assets/bush.png";
+        public const string IMAGE_PENDANT = "./Assets/pendant.png";
+        public const string IMAGE_PENDANT1 = "./Assets/pendant1.png";
+        public const string IMAGE_PENDANT2 = "./Assets/pendant2.png";
 
 
         // Sounds for the game will be initialized here
@@ -28,10 +32,13 @@ namespace THETHREEPENDANTS
         public const int CHARACTER_X = MAX_X / 2;
         public const int CHARACTER_Y = MAX_Y - 125;
 
-        public const int CHARACTER_WIDTH = 20;
-        public const int CHARACTER_HEIGHT = 20;
+        public const int CHARACTER_WIDTH = 1;
+        public const int CHARACTER_HEIGHT = 1;
 
-        public const int PADDLE_SPEED = 10;
+        public const int BUSH_WIDTH = 16;
+        public const int BUSH_HEIGHT = 16;
+
+        public const int CHARACTER_SPEED = 5;
 
         public const string MESSAGE_FILE = "messages.txt";
     }

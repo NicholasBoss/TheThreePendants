@@ -44,12 +44,13 @@ namespace THETHREEPENDANTS
         {
             Bush bush = new Bush();
 
-            int x = _randomGenerator.Next(0, Constants.MAX_X);
-            int y = _randomGenerator.Next(0, Constants.MAX_X);
+            int x = _randomGenerator.Next(0, Constants.MAX_X-50);
+            int y = _randomGenerator.Next(0, Constants.MAX_X-50);
             bush.SetPosition(new Point(x, y));
 
-            char symbol = (char)_randomGenerator.Next(33, 126);
-            bush.SetText(symbol.ToString());
+            // char symbol = (char)_randomGenerator.Next(33, 126);
+            // bush.SetText(symbol.ToString());
+            bush.SetImage(Constants.IMAGE_BUSH);
 
             string message = GetRandomMessage();
             bush.SetDescription(message);

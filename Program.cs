@@ -22,23 +22,26 @@ namespace THETHREEPENDANTS
             // Stationary Objects
             cast["bushes"] = new List<Actor>();
 
+            cast["pendants"] = new List<Actor>();
+
             BushesGenerator generator = new BushesGenerator();
 
             Bush pendant1 = generator.Generate();
-            pendant1.SetDescription("You have found a pendant");
-            cast["bushes"].Add(pendant1);
+            pendant1.SetDescription("You have found the first pendant");
+            cast["pendants"].Add(pendant1);
             Bush pendant2 = generator.Generate();
-            pendant1.SetDescription("You have found a pendant");
-            cast["bushes"].Add(pendant2);
+            pendant2.SetDescription("You have found the second pendant");
+            cast["pendants"].Add(pendant2);
             Bush pendant3 = generator.Generate();
-            pendant1.SetDescription("You have found a pendant");
-            cast["bushes"].Add(pendant3);
+            pendant3.SetDescription("You have found the third pendant");
+            cast["pendants"].Add(pendant3);
 
             for (int i = 0; i < Constants.NUM_BUSHES; i++)
             {
                 Bush bush = generator.Generate();
                 cast["bushes"].Add(bush);
             }
+            
             
 
             // The player

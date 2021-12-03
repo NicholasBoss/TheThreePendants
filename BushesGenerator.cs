@@ -44,8 +44,8 @@ namespace THETHREEPENDANTS
         {
             Bush bush = new Bush();
 
-            int x = _randomGenerator.Next(0, Constants.MAX_X-50);
-            int y = _randomGenerator.Next(0, Constants.MAX_X-50);
+            int x = _randomGenerator.Next(20, Constants.MAX_X-50);
+            int y = _randomGenerator.Next(20, Constants.MAX_X-50);
             bush.SetPosition(new Point(x, y));
 
             bush.SetImage(Constants.IMAGE_BUSH);

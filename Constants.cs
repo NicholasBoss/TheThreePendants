@@ -19,12 +19,12 @@ namespace THETHREEPENDANTS
         public const string DEFAULT_BILLBOARD_MESSAGE = "Find the three pendants. Use WASD to move around.";
 
         // Images for the game will be initialized here
-        public const string IMAGE_CHARACTER = "./Assets/player.png";
-        public const string IMAGE_BUSH = "./Assets/bush.png";
-        public const string IMAGE_PENDANT = "./Assets/pendant.png";
-        public const string IMAGE_PENDANT1 = "./Assets/pendant1.png";
-        public const string IMAGE_PENDANT2 = "./Assets/pendant2.png";
-        public const string IMAGE_CHEST = "./Assets/Chest.png";
+        public const string IMAGE_CHARACTER = "./Assets/bluebox.png";
+        public const string IMAGE_BUSH = "./Assets/graybox.png";
+        public const string IMAGE_PENDANT = "./Assets/yellowbox.png";
+        public const string IMAGE_PENDANT1 = "./Assets/yellowbox.png";
+        public const string IMAGE_PENDANT2 = "./Assets/yellowbox.png";
+        public const string IMAGE_CHEST = "./Assets/brownbox.png";
 
 
         // Sounds for the game will be initialized here

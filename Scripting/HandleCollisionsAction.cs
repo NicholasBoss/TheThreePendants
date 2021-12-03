@@ -43,15 +43,15 @@ namespace THETHREEPENDANTS.Scripting
                 }
             }
 
-            // This will be a lose condition if I can get it to work
-            // if(bushes.Count == Constants.NUM_BUSHES-15)
-            // {
-            //     _audioService.PlaySound(Constants.SOUND_LOSE);
-            //     billboard.SetText("Sorry, you lose. Press 'ESC' to leave the game.\n Better luck next time");
-            //     System.Threading.Thread.Sleep(2000);
-            //     Raylib_cs.Raylib.CloseWindow();
-            // }
+            // This will be a lose condition
+            if(bushes.Count == Constants.NUM_BUSHES-15)
+            {
+                // _audioService.PlaySound(Constants.SOUND_LOSE);
+                billboard.SetText("Sorry, you lose. Press 'ESC' to leave the game.\n Better luck next time");
+                System.Threading.Thread.Sleep(2000);
+            }
 
+            // This removes the bushes from the game once they've been searched.
             foreach(Actor bush in bushesToRemove)
             {
                 cast["bushes"].Remove(bush);

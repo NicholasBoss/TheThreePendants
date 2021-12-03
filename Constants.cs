@@ -16,7 +16,7 @@ namespace THETHREEPENDANTS
         public const int DEFAULT_TEXT_OFFSET = 4;
 
         public const int NUM_BUSHES = 20;
-        public const string DEFAULT_BILLBOARD_MESSAGE = "Find the three pendants";
+        public const string DEFAULT_BILLBOARD_MESSAGE = "Find the three pendants. Use WASD to move around.";
 
         // Images for the game will be initialized here
         public const string IMAGE_CHARACTER = "./Assets/player.png";

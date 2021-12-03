@@ -30,6 +30,7 @@ namespace THETHREEPENDANTS.Scripting
 
             billboard.SetText(Constants.DEFAULT_BILLBOARD_MESSAGE);
 
+            // This checks to see if the player collides with a bush
             foreach(Actor actor in bushes)
             {
                 Bush bush = (Bush)actor;
@@ -41,6 +42,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
             }
 
+            // This checks to see if the player collides with a pendant hiding spot
             foreach (Actor actor in pendants)
             {
                 Bush pendant1 = (Bush)pendants[0];
@@ -78,7 +80,7 @@ namespace THETHREEPENDANTS.Scripting
                 
             }
             
-            // This loop is to check for images to  handle the win condition
+            // This loop is to check for images to handle the win condition
             foreach(Actor actor in pendants)
             {
                 Actor pendant1 = pendants[0];

@@ -9,7 +9,6 @@ namespace THETHREEPENDANTS.Scripting
     ///<summary>
     public class HandleCollisionsAction : Action
     {
-        private int pendant_counter = 0;
         PhysicsService _physicsService;
         AudioService _audioService;
 
@@ -27,6 +26,7 @@ namespace THETHREEPENDANTS.Scripting
             
             List<Actor> bushes = cast["bushes"];
             List<Actor> pendants = cast["pendants"];
+            List<Actor> bushesToRemove = new List<Actor>();
 
             billboard.SetText(Constants.DEFAULT_BILLBOARD_MESSAGE);
 
@@ -36,10 +36,25 @@ namespace THETHREEPENDANTS.Scripting
                 Bush bush = (Bush)actor;
                 if(_physicsService.IsCollision(character, bush))
                 {
-                    _audioService.PlaySound(Constants.SOUND_LEAF);
+                    // _audioService.PlaySound(Constants.SOUND_LEAF);
                     string bushText = bush.GetDescription();
                     billboard.SetText(bushText);
+                    bushesToRemove.Add(bush);
                 }
+            }
+
+            // This will be a lose condition if I can get it to work
+            // if(bushes.Count == Constants.NUM_BUSHES-15)
+            // {
+            //     _audioService.PlaySound(Constants.SOUND_LOSE);
+            //     billboard.SetText("Sorry, you lose. Press 'ESC' to leave the game.\n Better luck next time");
+            //     System.Threading.Thread.Sleep(2000);
+            //     Raylib_cs.Raylib.CloseWindow();
+            // }
+
+            foreach(Actor bush in bushesToRemove)
+            {
+                cast["bushes"].Remove(bush);
             }
 
             // This checks to see if the player collides with a pendant hiding spot
@@ -51,7 +66,7 @@ namespace THETHREEPENDANTS.Scripting
                 
                 if(_physicsService.IsCollision(character,pendant1))
                 {
-                    _audioService.PlaySound(Constants.SOUND_PENDANT1);
+                    // _audioService.PlaySound(Constants.SOUND_PENDANT1);
                     string pendantText = pendant1.GetDescription();
                     billboard.SetText(pendantText);
                     pendant1.SetImage(Constants.IMAGE_PENDANT);
@@ -60,7 +75,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant2))
                 {
-                    _audioService.PlaySound(Constants.SOUND_PENDANT2);
+                    // _audioService.PlaySound(Constants.SOUND_PENDANT2);
                     string pendantText1 = pendant2.GetDescription();
                     billboard.SetText(pendantText1);
                     pendant2.SetImage(Constants.IMAGE_PENDANT1);
@@ -69,7 +84,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant3))
                 {
-                    _audioService.PlaySound(Constants.SOUND_PENDANT3);
+                    // _audioService.PlaySound(Constants.SOUND_PENDANT3);
                     string pendantText2 = pendant3.GetDescription();
                     billboard.SetText(pendantText2);
                     pendant3.SetImage(Constants.IMAGE_PENDANT2);
@@ -97,7 +112,7 @@ namespace THETHREEPENDANTS.Scripting
             }
             if(_physicsService.IsCollision(character,chest))
             {
-                _audioService.PlaySound(Constants.SOUND_WIN);
+                // _audioService.PlaySound(Constants.SOUND_WIN);
             }
 
         }

@@ -34,6 +34,7 @@ namespace THETHREEPENDANTS
         public const string SOUND_PENDANT3 = "./Assets/Pendant3.wav";
         public const string SOUND_WIN = "./Assets/Win.wav";
         public const string SOUND_START = "./Assets/Start.wav";
+        public const string SOUND_LOSE = "./Assets/Lose.wav";
 
         
         //Speed and position of the actors will be initialized here

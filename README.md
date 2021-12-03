@@ -1,6 +1,6 @@
 # TheThreePendants
 
-In this game you will gather three pendants to unlock the gate to the castle.
+In this game you will gather three pendants to unlock the chest.
 
 Top Priorities:
 Character

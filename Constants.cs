@@ -24,9 +24,17 @@ namespace THETHREEPENDANTS
         public const string IMAGE_PENDANT = "./Assets/pendant.png";
         public const string IMAGE_PENDANT1 = "./Assets/pendant1.png";
         public const string IMAGE_PENDANT2 = "./Assets/pendant2.png";
+        public const string IMAGE_CHEST = "./Assets/Chest.png";
 
 
         // Sounds for the game will be initialized here
+        public const string SOUND_LEAF = "./Assets/leaf.mp3";
+        public const string SOUND_PENDANT1 = "./Assets/Pendant1.wav";
+        public const string SOUND_PENDANT2 = "./Assets/Pendant2.wav";
+        public const string SOUND_PENDANT3 = "./Assets/Pendant3.wav";
+        public const string SOUND_WIN = "./Assets/Win.wav";
+        public const string SOUND_START = "./Assets/Start.wav";
+
         
         //Speed and position of the actors will be initialized here
         public const int CHARACTER_X = MAX_X / 2;

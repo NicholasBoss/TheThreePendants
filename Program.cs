@@ -23,6 +23,7 @@ namespace THETHREEPENDANTS
             cast["bushes"] = new List<Actor>();
 
             cast["pendants"] = new List<Actor>();
+            cast["chest"] = new List<Actor>();
 
             BushesGenerator generator = new BushesGenerator();
 
@@ -42,7 +43,8 @@ namespace THETHREEPENDANTS
                 cast["bushes"].Add(bush);
             }
             
-            
+            Chest chest = new Chest();
+            cast["chest"].Add(chest);
 
             // The player
             cast["character"] = new List<Actor>();
@@ -69,9 +71,6 @@ namespace THETHREEPENDANTS
             MoveActorsAction moveActorsAction = new MoveActorsAction();
             script["update"].Add(moveActorsAction);
 
-            HandleOffScreenAction handleOffScreenAction = new HandleOffScreenAction(audioService);
-            script["update"].Add(handleOffScreenAction);
-
             ControlActorsAction controlActorsAction = new ControlActorsAction(inputService);
             script["update"].Add(controlActorsAction);
 
@@ -81,7 +80,7 @@ namespace THETHREEPENDANTS
             // Start up the game
             outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "The Three Pendants", Constants.FRAME_RATE);
             audioService.StartAudio();
-            // audioService.PlaySound(Constants.SOUND_START);
+            audioService.PlaySound(Constants.SOUND_START);
 
             Director theDirector = new Director(cast, script);
             theDirector.Direct();

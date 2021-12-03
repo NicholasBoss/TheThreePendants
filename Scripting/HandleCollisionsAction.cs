@@ -23,6 +23,7 @@ namespace THETHREEPENDANTS.Scripting
         {
             Actor billboard = cast["environment"][0];
             Actor character = cast["character"][0];
+            Actor chest = cast["chest"][0];
             
             List<Actor> bushes = cast["bushes"];
             List<Actor> pendants = cast["pendants"];
@@ -34,6 +35,7 @@ namespace THETHREEPENDANTS.Scripting
                 Bush bush = (Bush)actor;
                 if(_physicsService.IsCollision(character, bush))
                 {
+                    _audioService.PlaySound(Constants.SOUND_LEAF);
                     string bushText = bush.GetDescription();
                     billboard.SetText(bushText);
                 }
@@ -47,7 +49,7 @@ namespace THETHREEPENDANTS.Scripting
                 
                 if(_physicsService.IsCollision(character,pendant1))
                 {
-
+                    _audioService.PlaySound(Constants.SOUND_PENDANT1);
                     string pendantText = pendant1.GetDescription();
                     billboard.SetText(pendantText);
                     pendant1.SetImage(Constants.IMAGE_PENDANT);
@@ -56,7 +58,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant2))
                 {
-
+                    _audioService.PlaySound(Constants.SOUND_PENDANT2);
                     string pendantText1 = pendant2.GetDescription();
                     billboard.SetText(pendantText1);
                     pendant2.SetImage(Constants.IMAGE_PENDANT1);
@@ -65,24 +67,35 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant3))
                 {
-
+                    _audioService.PlaySound(Constants.SOUND_PENDANT3);
                     string pendantText2 = pendant3.GetDescription();
                     billboard.SetText(pendantText2);
                     pendant3.SetImage(Constants.IMAGE_PENDANT2);
                     pendant3.IsFound();
                     
                 }
+
+                
             }
             
+            // This loop is to check for images to  handle the win condition
             foreach(Actor actor in pendants)
             {
                 Actor pendant1 = pendants[0];
                 Actor pendant2 = pendants[1];
                 Actor pendant3 = pendants[2];
+
                 if(pendant1.GetImage() == Constants.IMAGE_PENDANT && pendant2.GetImage() == Constants.IMAGE_PENDANT1 && pendant3.GetImage() == Constants.IMAGE_PENDANT2)
                 {
-                    billboard.SetText("You have found all three pendants. You Win!");
+                    billboard.SetText("You have found all three pendants. Open the chest to Win! \n Press 'ESC' to leave the game");
+                    chest.SetImage(Constants.IMAGE_CHEST);
+                    chest.SetHeight(33);
+                    chest.SetWidth(33);
                 }
+            }
+            if(_physicsService.IsCollision(character,chest))
+            {
+                _audioService.PlaySound(Constants.SOUND_WIN);
             }
 
         }

@@ -15,7 +15,7 @@ namespace THETHREEPENDANTS
     /// </summary>
     public class Director
     {
-        public bool _keepPlaying = true;
+        public static bool _keepPlaying = true;
         private Dictionary<string, List<Actor>> _cast;
         private Dictionary<string, List<Action>> _script;
 

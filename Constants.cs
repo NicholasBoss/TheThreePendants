@@ -19,29 +19,29 @@ namespace THETHREEPENDANTS
         public const string DEFAULT_BILLBOARD_MESSAGE = "Find the three pendants. Use WASD to move around.";
 
         // Images for the game will be initialized here
-        public const string IMAGE_CHARACTER = "./Assets/bluebox.png";
-        public const string IMAGE_BUSH = "./Assets/graybox.png";
-        public const string IMAGE_PENDANT = "./Assets/yellowbox.png";
-        public const string IMAGE_PENDANT1 = "./Assets/yellowbox.png";
-        public const string IMAGE_PENDANT2 = "./Assets/yellowbox.png";
-        public const string IMAGE_CHEST = "./Assets/brownbox.png";
+        // public const string IMAGE_CHARACTER = "./Assets/bluebox.png";
+        // public const string IMAGE_BUSH = "./Assets/graybox.png";
+        // public const string IMAGE_PENDANT = "./Assets/yellowbox.png";
+        // public const string IMAGE_PENDANT1 = "./Assets/yellowbox.png";
+        // public const string IMAGE_PENDANT2 = "./Assets/yellowbox.png";
+        // public const string IMAGE_CHEST = "./Assets/brownbox.png";
 
-        // public const string IMAGE_CHARACTER = "./Assets/player.png";
-        // public const string IMAGE_BUSH = "./Assets/bush.png";
-        // public const string IMAGE_PENDANT = "./Assets/pendant.png";
-        // public const string IMAGE_PENDANT1 = "./Assets/pendant1.png";
-        // public const string IMAGE_PENDANT2 = "./Assets/pendant2.png";
-        // public const string IMAGE_CHEST = "./Assets/chest.png";
+        public const string IMAGE_CHARACTER = "./Assets/player.png";
+        public const string IMAGE_BUSH = "./Assets/bush.png";
+        public const string IMAGE_PENDANT = "./Assets/pendant.png";
+        public const string IMAGE_PENDANT1 = "./Assets/pendant1.png";
+        public const string IMAGE_PENDANT2 = "./Assets/pendant2.png";
+        public const string IMAGE_CHEST = "./Assets/chest.png";
 
 
         // Sounds for the game will be initialized here
-        // public const string SOUND_LEAF = "./Assets/leaf.mp3";
-        // public const string SOUND_PENDANT1 = "./Assets/Pendant1.wav";
-        // public const string SOUND_PENDANT2 = "./Assets/Pendant2.wav";
-        // public const string SOUND_PENDANT3 = "./Assets/Pendant3.wav";
-        // public const string SOUND_WIN = "./Assets/Win.wav";
-        // public const string SOUND_START = "./Assets/Start.wav";
-        // public const string SOUND_LOSE = "./Assets/Lose.wav";
+        public const string SOUND_LEAF = "./Assets/leaf.mp3";
+        public const string SOUND_PENDANT1 = "./Assets/Pendant1.wav";
+        public const string SOUND_PENDANT2 = "./Assets/Pendant2.wav";
+        public const string SOUND_PENDANT3 = "./Assets/Pendant3.wav";
+        public const string SOUND_WIN = "./Assets/Win.wav";
+        public const string SOUND_START = "./Assets/Start.wav";
+        public const string SOUND_LOSE = "./Assets/Lose.wav";
 
         
         //Speed and position of the actors will be initialized here

@@ -36,7 +36,7 @@ namespace THETHREEPENDANTS.Scripting
                 Bush bush = (Bush)actor;
                 if(_physicsService.IsCollision(character, bush))
                 {
-                    // _audioService.PlaySound(Constants.SOUND_LEAF);
+                    _audioService.PlaySound(Constants.SOUND_LEAF);
                     string bushText = bush.GetDescription();
                     billboard.SetText(bushText);
                     bushesToRemove.Add(bush);
@@ -46,7 +46,7 @@ namespace THETHREEPENDANTS.Scripting
             // This will be a lose condition
             if(bushes.Count == Constants.NUM_BUSHES-15)
             {
-                // _audioService.PlaySound(Constants.SOUND_LOSE);
+                _audioService.PlaySound(Constants.SOUND_LOSE);
                 billboard.SetText("Sorry, you lose. Press 'ESC' to leave the game.\n Better luck next time");
                 System.Threading.Thread.Sleep(2000);
             }
@@ -66,7 +66,7 @@ namespace THETHREEPENDANTS.Scripting
                 
                 if(_physicsService.IsCollision(character,pendant1))
                 {
-                    // _audioService.PlaySound(Constants.SOUND_PENDANT1);
+                    _audioService.PlaySound(Constants.SOUND_PENDANT1);
                     string pendantText = pendant1.GetDescription();
                     billboard.SetText(pendantText);
                     pendant1.SetImage(Constants.IMAGE_PENDANT);
@@ -75,7 +75,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant2))
                 {
-                    // _audioService.PlaySound(Constants.SOUND_PENDANT2);
+                    _audioService.PlaySound(Constants.SOUND_PENDANT2);
                     string pendantText1 = pendant2.GetDescription();
                     billboard.SetText(pendantText1);
                     pendant2.SetImage(Constants.IMAGE_PENDANT1);
@@ -84,7 +84,7 @@ namespace THETHREEPENDANTS.Scripting
                 }
                 if(_physicsService.IsCollision(character,pendant3))
                 {
-                    // _audioService.PlaySound(Constants.SOUND_PENDANT3);
+                    _audioService.PlaySound(Constants.SOUND_PENDANT3);
                     string pendantText2 = pendant3.GetDescription();
                     billboard.SetText(pendantText2);
                     pendant3.SetImage(Constants.IMAGE_PENDANT2);
@@ -112,7 +112,7 @@ namespace THETHREEPENDANTS.Scripting
             }
             if(_physicsService.IsCollision(character,chest))
             {
-                // _audioService.PlaySound(Constants.SOUND_WIN);
+                _audioService.PlaySound(Constants.SOUND_WIN);
             }
 
         }

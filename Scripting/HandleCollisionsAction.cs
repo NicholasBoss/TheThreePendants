@@ -125,8 +125,8 @@ namespace THETHREEPENDANTS.Scripting
                 {
                     billboard.SetText("You have found all three pendants. Open the chest to Win! \n Press 'ESC' to leave the game");
                     chest.SetImage(Constants.IMAGE_CHEST);
-                    chest.SetHeight(5);
-                    chest.SetWidth(5);
+                    chest.SetHeight(10);
+                    chest.SetWidth(10);
                     foreach(Actor bush in bushes)
                     {
                         bush.SetHeight(0);

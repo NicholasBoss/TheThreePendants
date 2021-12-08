@@ -18,6 +18,9 @@ namespace THETHREEPENDANTS
             Billboard billboard = new Billboard();
             cast["environment"].Add(billboard);
 
+            Tries tries = new Tries();
+            cast["environment"].Add(tries);
+
             // Stationary Objects
             cast["bushes"] = new List<Actor>();
 

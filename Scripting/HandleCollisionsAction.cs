@@ -23,6 +23,7 @@ namespace THETHREEPENDANTS.Scripting
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
             Actor billboard = cast["environment"][0];
+            Actor tries = cast["environment"][1];
             Actor character = cast["character"][0];
             Actor chest = cast["chest"][0];
             
@@ -72,6 +73,7 @@ namespace THETHREEPENDANTS.Scripting
             foreach(Actor bush in bushesToRemove)
             {
                 cast["bushes"].Remove(bush);
+                tries.SetText($"Tries left: {Tries.tries -= 1}");
             }
 
             // This checks to see if the player collides with a pendant hiding spot
@@ -123,8 +125,13 @@ namespace THETHREEPENDANTS.Scripting
                 {
                     billboard.SetText("You have found all three pendants. Open the chest to Win! \n Press 'ESC' to leave the game");
                     chest.SetImage(Constants.IMAGE_CHEST);
-                    chest.SetHeight(33);
-                    chest.SetWidth(33);
+                    chest.SetHeight(5);
+                    chest.SetWidth(5);
+                    foreach(Actor bush in bushes)
+                    {
+                        bush.SetHeight(0);
+                        bush.SetWidth(0);
+                    }
                 }
             }
             if(_physicsService.IsCollision(character,chest))

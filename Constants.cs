@@ -51,8 +51,8 @@ namespace THETHREEPENDANTS
         public const int CHARACTER_WIDTH = 1;
         public const int CHARACTER_HEIGHT = 1;
 
-        public const int BUSH_WIDTH = 16;
-        public const int BUSH_HEIGHT = 16;
+        public const int BUSH_WIDTH = 20;
+        public const int BUSH_HEIGHT = 20;
 
         public const int CHARACTER_SPEED = 5;
 

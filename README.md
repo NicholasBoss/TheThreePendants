@@ -1,20 +1,17 @@
 # TheThreePendants
 
-In this game you will gather three pendants to unlock the chest.
+In this game you will gather three pendants to unlock the chest using the WASD keys to move.
 
-Top Priorities:
-Character
-Level map 
-Objects to hide pendant under.
-Messages to display when pendant is found/not found.
-Lose condition? (timer/damage to player?(Would need character to have lives))
+# Development Environment
 
-Low Priorities:
-Two other Levels (Different configuration/image)
-Character has lives
-Boss level/boss character??
-Pendants give player something
-Remove objects that have been searched?
+VS Code
+
+
+C#
+
+# Future Work
+* Adding Title and end screens
+* Settings Menu
 
 
 Classes needed:

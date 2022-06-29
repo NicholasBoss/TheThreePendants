@@ -1,4 +1,4 @@
-# TheThreePendants
+# Overview
 
 In this game you will gather three pendants to unlock the chest using the WASD keys to move.
 

@@ -14,7 +14,7 @@ C#
 * Settings Menu
 
 
-Classes needed:
+# Classes needed:
 Actor - this will be handling all actions that the actors can do
 Character - This will handle all information for the player character
 Pendant - This class will contain all information pertaining to the pendants
